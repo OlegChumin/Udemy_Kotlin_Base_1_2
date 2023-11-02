@@ -53,8 +53,25 @@ fun main() {
     drawLine()
 
     println("3. Логические")
+    println("Boolean == true || false")
+    println("${1==2} или ${1==1}")
+    drawLine()
+
     println("4. Строковые")
+    println("String")
+    println("Какая-то строка")
+    drawLine()
+
     println("5. Символьные")
+    println("Char")
+    println("${Char.MIN_VALUE}...${Char.MAX_VALUE}")
+    for (char in 'A'..'Z') {
+        print("$char ")
+    }
+    println()
+    print_UTF_16()
+    drawLine()
+
 
 }
 
@@ -63,3 +80,15 @@ fun clearScreen() {
 }
 
 fun drawLine() = println("-----------------------------------------")
+
+fun print_UTF_16() {
+    println("UTF-16")
+    val startChar = Char.MIN_VALUE.toInt()
+    val endChar = Char.MAX_VALUE.toInt()
+
+    for (i in startChar..endChar) {
+        val char = i.toChar()
+        print("$i: $char; ")
+    }
+}
+
