@@ -1,94 +1,64 @@
 package lesson_02
 
 fun main() {
-    // println("Hello World!")
+    val a = 5
+    val b = 7
+    val sum = a + b
 
-    val numberOfOrders: Int = 42
+    val c1 = 888
+    val c: Int
 
-    var notificationText = "Не забудьте маску и перчатки!"
+    println(a + b)
+    println(sum)
 
-    println("$numberOfOrders\n$notificationText\n")
+    println(10 / 3)
 
-    notificationText = "Маски больше не потребуются"
+    val intNum1 = 10
+    val intNum2 = 3
+    println(intNum1 / intNum2)
 
-    clearScreen()
+    val floatNum1 = 10f
+    val floatNum2 = 3f
+    println(floatNum1 / floatNum2)
 
-    println("$numberOfOrders\n$notificationText\n")
+    val doubleNum1: Double = 10.0
+    val dooubleNum2: Double = 3.0
+    println(doubleNum1 / dooubleNum2)
 
-    println("Данные")
-    drawLine()
-    drawLine()
-    println("1. Целые")
-    drawLine()
+    // остаток от деления %
+    println(10 % 3)
+    println(10 % 2)
+    val intNumber = 10
+    println(intNumber.rem(2))
 
-    println("Byte == 8bit signed")
-    println("${Byte.MIN_VALUE}...${Byte.MAX_VALUE}")
-    println("Byte == 8bit unsigned")
-    println("${UByte.MIN_VALUE}...${UByte.MAX_VALUE}")
-    drawLine()
+    println(intNum1 + floatNum1)
+    println(intNum1 + floatNum1 + doubleNum1)
 
-    println("Short == 16bit == 2Byte signed")
-    println("${Short.MIN_VALUE}...${Short.MAX_VALUE}")
-    println("UShort == 16bit == 2Byte unsigned")
-    println("${UShort.MIN_VALUE}...${UShort.MAX_VALUE}")
-    drawLine()
+    val d = intNum2 + floatNum1
+    println(d::class.simpleName)
 
-    println("Int == 32bit == 4Byte signed DEFAULT")
-    println("${Int.MIN_VALUE}...${Int.MAX_VALUE}")
-    println("Int == 32bit == 4Byte unsigned")
-    println("${UInt.MIN_VALUE}...${UInt.MAX_VALUE}")
-    drawLine()
+    //
+    var counter = 0
+    counter = counter + 1
+    counter += 1
+    counter++
 
-    println("Long == 64bit == 8Byte signed")
-    println("${Long.MIN_VALUE}...${Long.MAX_VALUE}")
-    println("ULong == 64bit == 8Byte unsigned")
-    println("${ULong.MIN_VALUE}...${ULong.MAX_VALUE}")
-    drawLine()
 
-    println("2. Вещественные")
-    println("Float == 32bit == 4Byte signed")
-    println("${Float.MIN_VALUE}...${Float.MAX_VALUE}")
-    println("Double == 64bit == 8Byte signed DEFAULT")
-    println("${Double.MIN_VALUE}...${Double.MAX_VALUE}")
-    drawLine()
+    counter = counter - 1
+    counter -= 1
+    counter--
 
-    println("3. Логические")
-    println("Boolean == true || false")
-    println("${1==2} или ${1==1}")
-    drawLine()
+    ++counter
+    --counter
 
-    println("4. Строковые")
-    println("String")
-    println("Какая-то строка")
-    drawLine()
+    var counter1 = 5
+    val result1 = ++counter1 // counter2 увеличивается на 1, затем result1 равен 6
 
-    println("5. Символьные")
-    println("Char")
-    println("${Char.MIN_VALUE}...${Char.MAX_VALUE}")
-    for (char in 'A'..'Z') {
-        print("$char ")
-    }
-    println()
-    print_UTF_16()
-    drawLine()
+    var counter2 = 5
+    val result2 = counter2++ // result2 равен 5, затем counter2 увеличивается на 1
+
+
+
 
 
 }
-
-fun clearScreen() {
-    print("\u001b[H\u001b[2J")
-}
-
-fun drawLine() = println("-----------------------------------------")
-
-fun print_UTF_16() {
-    println("UTF-16")
-    val startChar = Char.MIN_VALUE.code
-    val endChar = Char.MAX_VALUE.code
-
-    for (i in startChar..endChar) {
-        val char = i.toChar()
-        print("$i: $char; ")
-    }
-}
-
