@@ -83,8 +83,8 @@ fun drawLine() = println("-----------------------------------------")
 
 fun print_UTF_16() {
     println("UTF-16")
-    val startChar = Char.MIN_VALUE.toInt()
-    val endChar = Char.MAX_VALUE.toInt()
+    val startChar = Char.MIN_VALUE
+    val endChar = Char.MAX_VALUE
 
     for (i in startChar..endChar) {
         val char = i.toChar()
