@@ -57,8 +57,13 @@ fun main() {
     var counter2 = 5
     val result2 = counter2++ // result2 равен 5, затем counter2 увеличивается на 1
 
-
-
-
+    // операторы сравнения
+    println("a = $a, b = $b")
+    println("a > b ${a > b}")
+    println("a >= b ${a >= b}")
+    println("a < b ${a < b}")
+    println("a <= b ${a <= b}")
+    println("a != b ${a != b}")
+    println("a == b ${a == b}")
 
 }
