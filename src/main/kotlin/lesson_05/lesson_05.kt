@@ -14,14 +14,14 @@ fun main() {
         println("Вернуть на главный экран приложения")
     }
 
-    val textResult = if (userAge >= AGE_OF_MAGORITY) "Показать экран со скрытым контентом"
+    fun textResult() = if (userAge >= AGE_OF_MAGORITY) "Показать экран со скрытым контентом"
     else if (userAge == 16 || userAge == 17) "Показать экран с ограниченным контентом"
     else "Вернуть на главный экран приложения"
 
-    when(userAge) {
-        10 -> println("Ввели число $userAge")
-        20 -> println("Ввели число $userAge")
-        42 -> println("Ввели число $userAge")
+    when {
+        userAge == 10 -> println("Ввели число $userAge")
+        userAge == 20 -> println("Ввели число $userAge")
+        userAge == 42 -> println("Ввели число $userAge")
         else -> println("Ввели другое число")
     }
 

@@ -32,7 +32,7 @@ fun main() {
     println(intNumber.rem(2))
 
     println(intNum1 + floatNum1)
-    println(intNum1 + floatNum1 + doubleNum1)
+    println("${intNum1 + floatNum1 + doubleNum1}   текст")
 
     val d = intNum2 + floatNum1
     println(d::class.simpleName)
@@ -53,9 +53,11 @@ fun main() {
 
     var counter1 = 5
     val result1 = ++counter1 // counter2 увеличивается на 1, затем result1 равен 6
+    //result == 6, counter = 6
 
     var counter2 = 5
     val result2 = counter2++ // result2 равен 5, затем counter2 увеличивается на 1
+        //result == 5, counter = 6
 
     // операторы сравнения
     println("a = $a, b = $b")
@@ -66,4 +68,19 @@ fun main() {
     println("a != b ${a != b}")
     println("a == b ${a == b}")
 
+//    val someClass = SomeClass()
+    val с = a
+    println(a === с) //true
+    "==="
+    "!=="
+
 }
+
+//class SomeClass(
+//    val name: String,
+//) {
+//    init{ }
+//    constructor(name: String, age: Int ) {
+//
+//    }
+//}
